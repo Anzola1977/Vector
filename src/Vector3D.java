@@ -15,6 +15,11 @@ public class Vector3D extends Vector {
     }
 
     double getscalarProduct(Vector3D vector3D) {
-        return
+        String cords = getVectorCords();
+        String cords2 = vector3D.getVectorCords();
+        int a = Integer.parseInt(cords.split(" ")[0]) * Integer.parseInt(cords2.split(" ")[0]);
+        int b = Integer.parseInt(cords2.split(" ")[1]) * Integer.parseInt(cords.split(" ")[1]);
+        int c = Integer.parseInt(cords.split(" ")[2]) * Integer.parseInt(cords2.split(" ")[2]);
+        return a + b + c;
     }
 }
